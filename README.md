@@ -52,3 +52,17 @@ This compiles the typescript files into javascript and saves them in the `dist` 
 
 This runs the compiler in watch mode to we don't have to run it all the time; it will compile when there are changes.
 
+### Some basic scripts
+
+```
+{
+  "scripts": {
+    "build": "tsc",  // runs the typescript compiler
+    "dev": "tsc --w" // runs the compiler in watch mode
+  },
+  "devDependencies": {
+    "typescript": "^5.7.2"
+  }
+}
+```
+

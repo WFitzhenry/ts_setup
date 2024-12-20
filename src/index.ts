@@ -1,10 +1,7 @@
 let isWorldSaved: boolean = false;
 
-export function saveTheWorld() {
-  if (isWorldSaved) {
-    return `Too late, world has already been saved`;
-  } else {
-    isWorldSaved = true;
-    return `Hurray, you just saved the world`;
-  }
+export function sayHello(): string {
+  return 'hello world'
 }
+
+console.log(sayHello())
