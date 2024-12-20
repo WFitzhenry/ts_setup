@@ -1,5 +1,5 @@
 function sayHello(): string {
-  return 'hello world'
+  return 'hello world';
 }
 
-console.log(sayHello())
+console.log(sayHello());

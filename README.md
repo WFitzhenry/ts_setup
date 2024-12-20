@@ -97,5 +97,37 @@ export default tseslint.config({
   });
   ```
 
-  
+We can add a script for this in package.json
+```
+"lint": "eslint --ext .ts ."
+```
 
+### Prettier
+
+- npm install prettier --save-dev
+
+The primary function of a linter is to improve your code by analyzing it and alerting you to any potential issues based on customizable or pre-defined rulesets. These rulesets, or rules, allow development teams to maintain a consistent coding style and identify potential bugs caused by inconsistent coding styles.
+
+On the other hand, a code formatter like Prettier ensures a consistent style by parsing your code and re-printing it according to its rules. For example, you can specify a style that all JavaScript statements must end with a semicolon; the code formatter will automatically add the semicolon to all statements without one.
+
+In essence, you can use ESLint to specify rulesets that must be adhered to and then use Prettier to fix cases in your code where these rulesets are broken.
+
+Compared to ESLint, Prettier doesn’t need a config file, meaning you can run and use it straight away. However, if you want to set a config, you will need to create a file called .prettierrc.json in the project’s root directory, where you can define your format options.
+
+You don't need a config file with prettier, but you can add extra format options in a `.prettierrc.json` file.
+
+```
+{
+  "singleQuote": true,
+  "trailingComma": "all",
+  "printWidth": 100,
+  "arrowParens": "avoid"
+}
+```
+And you can also set a `.prettierignore` file to exlude files.
+
+We can use:
+
+- npx prettier --write src/index.ts
+
+to apply prettier to files. But a much easier way to work is to use it whenever saving a file. To do this with VSCode
