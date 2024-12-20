@@ -1,6 +1,6 @@
 let isWorldSaved: boolean = false;
 
-export function saveTheWorld(): string {
+export function saveTheWorld() {
   if (isWorldSaved) {
     return `Too late, world has already been saved`;
   } else {

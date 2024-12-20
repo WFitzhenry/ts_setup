@@ -27,7 +27,6 @@ See https://www.totaltypescript.com/tsconfig-cheat-sheet for details.
     "resolveJsonModule": true,
     "moduleDetection": "force",
     "isolatedModules": true,
-    "verbatimModuleSyntax": true,
 
     /* Strictness */
     "strict": true,
@@ -37,7 +36,6 @@ See https://www.totaltypescript.com/tsconfig-cheat-sheet for details.
     /* If transpiling with TypeScript: */
     "module": "NodeNext",
     "outDir": "dist",
-    "sourceMap": true,
 
     /* If your code runs in the DOM: */
     "lib": ["es2022", "dom"],
@@ -45,7 +43,13 @@ See https://www.totaltypescript.com/tsconfig-cheat-sheet for details.
   "include": ["src"]
 }
 
+### Run the compiler
 
- "scripts": {
-  "dev": "tsc --watch"
-}
+- npx tsc
+
+This compiles the typescript files into javascript and saves them in the `dist` folder
+
+- npx tsc -w
+
+This runs the compiler in watch mode to we don't have to run it all the time; it will compile when there are changes.
+
