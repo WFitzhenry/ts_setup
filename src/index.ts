@@ -1,6 +1,4 @@
-let isWorldSaved: boolean = false;
-
-export function sayHello(): string {
+function sayHello(): string {
   return 'hello world'
 }
 
