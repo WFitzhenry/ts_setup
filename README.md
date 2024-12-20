@@ -1,13 +1,16 @@
 # Setting up basic typescript project
 
 ### Basic project setup
+
 - add .gitignore
 - add src/index.ts
 
 ### Saves ts a dev dependency as it's needed for development
+
 - npm i typescript --save-dev
 
 ### Initialise the project
+
 - npx tsc -init
 
 The command above uses npx (a tool that allows you to execute any JavaScript package available on the NPM registry without even installing it) to run the command that initializes a TypeScript project.
@@ -70,12 +73,12 @@ In package.json:
 
 ### VSCode and IntelliSense
 
-[IntelliSense](https://code.visualstudio.com/docs/languages/typescript#_intellisense) from VSCode shows you intelligent code completion, 
+[IntelliSense](https://code.visualstudio.com/docs/languages/typescript#_intellisense) from VSCode shows you intelligent code completion,
 hover information, and signature help so that you can write code more quickly and correctly.
 
 ### Setting up ESlint with TypeScript
 
-- npm install --save-dev eslint @eslint/js typescript-eslint 
+- npm install --save-dev eslint @eslint/js typescript-eslint
 
 And add a `eslint.config.mjs` file in the top level of the directory. Populate it with:
 
@@ -95,12 +98,15 @@ export default tseslint.config({
       '@typescript-eslint/consistent-type-imports': 'error',
     },
   });
-  ```
+```
 
 We can add a script for this in package.json
+
 ```
 "lint": "eslint --ext .ts ."
 ```
+
+and run with: `npm run lint`
 
 ### Prettier
 
@@ -124,10 +130,18 @@ You don't need a config file with prettier, but you can add extra format options
   "arrowParens": "avoid"
 }
 ```
+
 And you can also set a `.prettierignore` file to exlude files.
 
 We can use:
 
 - npx prettier --write src/index.ts
 
-to apply prettier to files. But a much easier way to work is to use it whenever saving a file. To do this with VSCode
+to apply prettier to files. But a much easier way to work is to use it whenever saving a file. To do this with VSCode. In `settings.json` (Command + Shift + P) set:
+
+```
+{
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.formatOnSave": true,
+}
+```
