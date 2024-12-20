@@ -54,6 +54,8 @@ This runs the compiler in watch mode to we don't have to run it all the time; it
 
 ### Some basic scripts
 
+In package.json:
+
 ```
 {
   "scripts": {
@@ -66,7 +68,12 @@ This runs the compiler in watch mode to we don't have to run it all the time; it
 }
 ```
 
-### Setting up eslint with typescript
+### VSCode and IntelliSense
+
+[IntelliSense](https://code.visualstudio.com/docs/languages/typescript#_intellisense) from VSCode shows you intelligent code completion, 
+hover information, and signature help so that you can write code more quickly and correctly.
+
+### Setting up ESlint with TypeScript
 
 - npm install --save-dev eslint @eslint/js typescript-eslint 
 
@@ -89,4 +96,6 @@ export default tseslint.config({
     },
   });
   ```
+
+  
 
