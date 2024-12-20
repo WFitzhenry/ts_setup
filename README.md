@@ -66,3 +66,27 @@ This runs the compiler in watch mode to we don't have to run it all the time; it
 }
 ```
 
+### Setting up eslint with typescript
+
+- npm install --save-dev eslint @eslint/js typescript-eslint 
+
+And add a `eslint.config.mjs` file in the top level of the directory. Populate it with:
+
+```
+import eslint from "@eslint/js";
+import tseslint from "typescript-eslint";
+
+export default tseslint.config({
+    files: ['**/*.ts'],
+    ignores: [".node_modules/*"],
+    extends: [
+      eslint.configs.recommended,
+      tseslint.configs.recommended,
+    ],
+    rules: {
+      '@typescript-eslint/array-type': 'error',
+      '@typescript-eslint/consistent-type-imports': 'error',
+    },
+  });
+  ```
+
