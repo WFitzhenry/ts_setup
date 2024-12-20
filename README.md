@@ -17,6 +17,7 @@ Running this command creates a new tsconfig.json file, which defines how TypeScr
 
 See https://www.totaltypescript.com/tsconfig-cheat-sheet for details.
 
+```
 {
   "compilerOptions": {
     /* Base Options: */
@@ -27,21 +28,19 @@ See https://www.totaltypescript.com/tsconfig-cheat-sheet for details.
     "resolveJsonModule": true,
     "moduleDetection": "force",
     "isolatedModules": true,
-
     /* Strictness */
     "strict": true,
     "noUncheckedIndexedAccess": true,
     "noImplicitOverride": true,
-
     /* If transpiling with TypeScript: */
     "module": "NodeNext",
     "outDir": "dist",
-
     /* If your code runs in the DOM: */
     "lib": ["es2022", "dom"],
   },
   "include": ["src"]
 }
+```
 
 ### Run the compiler
 
